@@ -1,6 +1,6 @@
 # WriteByUs — a text humanizer
 
-[![Live Website](https://img.shields.io/badge/Live%20Website-WriteByUs%20App-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://kmrr-gautam.github.io/WriteByUs/)
+[![Live Website](https://img.shields.io/badge/Live%20Website-WriteByUs%20App-success?style=for-the-badge&logo=vercel&logoColor=white)](https://writebyus.vercel.app/)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Kmrr--Gautam%2FWriteByUs-181717?style=for-the-badge&logo=github)](https://github.com/Kmrr-Gautam/WriteByUs)
 [![Author](https://img.shields.io/badge/Author-Gautam%20Kumar-emerald?style=for-the-badge)](https://github.com/Kmrr-Gautam)
 
@@ -11,18 +11,13 @@ Developed and created by **[Gautam Kumar](https://github.com/Kmrr-Gautam)**.
 ---
 
 ## 🌐 Live Website & Demo
-- **Live Site URL:** **[https://kmrr-gautam.github.io/WriteByUs/](https://kmrr-gautam.github.io/WriteByUs/)**
+- **Live Site URL:** **[https://writebyus.vercel.app/](https://writebyus.vercel.app/)**
 - **GitHub Repository:** [https://github.com/Kmrr-Gautam/WriteByUs](https://github.com/Kmrr-Gautam/WriteByUs)
 - **Author Profile:** [https://github.com/Kmrr-Gautam](https://github.com/Kmrr-Gautam)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKmrr-Gautam%2FWriteByUs&project-name=writebyus&repository-name=writebyus&root-directory=frontend)
 
 *The live app runs 100% in the browser as a standalone Progressive Web App (PWA) with zero server setup required — anyone can open the link on mobile or desktop to humanize text, scan for genuine AI plagiarism, and install the app.*
-
-### ⚡ Enabling GitHub Pages (1-Time Setup)
-1. Go to your repo **Settings** → **Pages** ([https://github.com/Kmrr-Gautam/WriteByUs/settings/pages](https://github.com/Kmrr-Gautam/WriteByUs/settings/pages))
-2. Under **Build and deployment** → **Source**, select **"GitHub Actions"**
-3. The included workflow (`.github/workflows/deploy.yml`) will automatically build and publish the live site at **`https://kmrr-gautam.github.io/WriteByUs/`**!
 
 ---
 

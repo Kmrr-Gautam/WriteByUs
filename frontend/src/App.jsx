@@ -510,7 +510,7 @@ export default function App() {
 
           <div className="flex items-center gap-3 sm:gap-4">
             <a
-              href="https://kmrr-gautam.github.io/WriteByUs/"
+              href="https://writebyus.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-emerald-300 flex items-center gap-1 transition-colors text-emerald-400/90 font-medium"

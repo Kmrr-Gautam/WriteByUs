@@ -69,7 +69,7 @@ export default function Navbar({ onOpenRules, onOpenVoice, onOpenSettings, voice
         <div className="flex items-center gap-1 sm:gap-2 shrink-0">
           {/* Live site indicator badge */}
           <a
-            href="https://kmrr-gautam.github.io/WriteByUs/"
+            href="https://writebyus.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 rounded-lg transition-all"
