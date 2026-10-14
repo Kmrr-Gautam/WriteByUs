@@ -67,6 +67,18 @@ export default function Navbar({ onOpenRules, onOpenVoice, onOpenSettings, voice
 
         {/* Nav Actions (Responsive for Mobile) */}
         <div className="flex items-center gap-1 sm:gap-2 shrink-0">
+          {/* Live site indicator badge */}
+          <a
+            href="https://kmrr-gautam.github.io/WriteByUs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 rounded-lg transition-all"
+            title="Open Live Web App"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Live Site</span>
+          </a>
+
           {/* Quick Plag Check Switch */}
           {onSwitchToPlag && (
             <button

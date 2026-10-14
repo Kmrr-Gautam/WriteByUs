@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, UserCheck, Check, Trash2, HelpCircle } from 'lucide-react';
+import { apiAnalyzeVoice } from '../services/engine';
 
 export default function VoiceModal({ isOpen, onClose, voiceSample, onSaveVoice }) {
   const [sampleText, setSampleText] = useState(voiceSample || '');
@@ -19,12 +20,7 @@ export default function VoiceModal({ isOpen, onClose, voiceSample, onSaveVoice }
     const timer = setTimeout(async () => {
       setIsAnalyzing(true);
       try {
-        const res = await fetch('/api/voice-sample', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ sample: sampleText })
-        });
-        const data = await res.json();
+        const data = await apiAnalyzeVoice(sampleText);
         setVoiceStats(data);
       } catch (e) {
         console.error('Failed to analyze voice sample:', e);

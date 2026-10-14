@@ -1,9 +1,8 @@
 # WriteByUs — a text humanizer
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Kmrr--Gautam%2FWriteByUs-181717?style=flat&logo=github)](https://github.com/Kmrr-Gautam/WriteByUs)
-[![Author](https://img.shields.io/badge/Author-Gautam%20Kumar-emerald?style=flat)](https://github.com/Kmrr-Gautam)
-[![PWA Ready](https://img.shields.io/badge/PWA-Installable-blue?style=flat&logo=pwa)](https://github.com/Kmrr-Gautam/WriteByUs)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Live Website](https://img.shields.io/badge/Live%20Website-WriteByUs%20App-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://kmrr-gautam.github.io/WriteByUs/)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Kmrr--Gautam%2FWriteByUs-181717?style=for-the-badge&logo=github)](https://github.com/Kmrr-Gautam/WriteByUs)
+[![Author](https://img.shields.io/badge/Author-Gautam%20Kumar-emerald?style=for-the-badge)](https://github.com/Kmrr-Gautam)
 
 > **WriteByUs** is a Progressive Web App (PWA) that strips mechanical AI writing patterns, checks genuine AI plagiarism, and restores authentic human cadence to text without modifying your factual claims.
 
@@ -11,9 +10,12 @@ Developed and created by **[Gautam Kumar](https://github.com/Kmrr-Gautam)**.
 
 ---
 
-## Live Demo & Repository
-- **Repository URL:** [https://github.com/Kmrr-Gautam/WriteByUs](https://github.com/Kmrr-Gautam/WriteByUs)
+## 🌐 Live Website & Demo
+- **Live Site URL:** **[https://kmrr-gautam.github.io/WriteByUs/](https://kmrr-gautam.github.io/WriteByUs/)**
+- **GitHub Repository:** [https://github.com/Kmrr-Gautam/WriteByUs](https://github.com/Kmrr-Gautam/WriteByUs)
 - **Author Profile:** [https://github.com/Kmrr-Gautam](https://github.com/Kmrr-Gautam)
+
+*The live app runs 100% in the browser as a standalone Progressive Web App (PWA) with zero server setup required — anyone can open the link on mobile or desktop to humanize text, scan for genuine AI plagiarism, and install the app.*
 
 ---
 

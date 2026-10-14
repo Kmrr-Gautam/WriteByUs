@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ShieldCheck, AlertTriangle, CheckCircle, FileText, Sparkles, RefreshCw, Layers, Fingerprint } from 'lucide-react';
+import { apiPlagCheck } from '../services/engine';
 
 export default function PlagChecker({ text, onRunHumanize }) {
   const [loading, setLoading] = useState(false);
@@ -10,12 +11,7 @@ export default function PlagChecker({ text, onRunHumanize }) {
     if (!text || !text.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch('/api/plag-check', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text })
-      });
-      const data = await res.json();
+      const data = await apiPlagCheck(text);
       setResult(data);
       if (data.sentences && data.sentences.length > 0) {
         const flagged = data.sentences.find(s => s.riskScore >= 25) || data.sentences[0];

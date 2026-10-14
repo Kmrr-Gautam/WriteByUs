@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Search, BookOpen, Tag } from 'lucide-react';
+import { apiGetRules } from '../services/engine';
 
 export default function RulesModal({ isOpen, onClose }) {
   const [rules, setRules] = useState([]);
@@ -9,13 +10,10 @@ export default function RulesModal({ isOpen, onClose }) {
 
   useEffect(() => {
     if (isOpen && rules.length === 0) {
-      fetch('/api/rules')
-        .then(res => res.json())
-        .then(data => {
-          setRules(data.rules || []);
-          setCategories(data.categories || {});
-        })
-        .catch(err => console.error('Failed to load rules:', err));
+      apiGetRules().then(data => {
+        setRules(data.rules || []);
+        setCategories(data.categories || {});
+      });
     }
   }, [isOpen, rules.length]);
 

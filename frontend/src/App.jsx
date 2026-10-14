@@ -26,6 +26,8 @@ import RulesModal from './components/RulesModal';
 import VoiceModal from './components/VoiceModal';
 import SettingsModal from './components/SettingsModal';
 
+import { apiAnalyze, apiHumanize, apiGetPresets } from './services/engine';
+
 export default function App() {
   const [inputText, setInputText] = useState('');
   const [humanizedResult, setHumanizedResult] = useState(null);
@@ -80,16 +82,13 @@ export default function App() {
 
   // Fetch presets
   useEffect(() => {
-    fetch('/api/presets')
-      .then(res => res.json())
-      .then(data => {
-        setPresets(data);
-        if (data.length > 0 && !inputText) {
-          setInputText(data[0].text);
-          setSelectedPresetId(data[0].id);
-        }
-      })
-      .catch(err => console.error('Failed to load presets:', err));
+    apiGetPresets().then((data) => {
+      setPresets(data);
+      if (data.length > 0 && !inputText) {
+        setInputText(data[0].text);
+        setSelectedPresetId(data[0].id);
+      }
+    });
   }, []);
 
   // Real-time analysis debounce
@@ -102,12 +101,7 @@ export default function App() {
     const timer = setTimeout(async () => {
       setIsAnalyzing(true);
       try {
-        const res = await fetch('/api/analyze', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text: inputText })
-        });
-        const data = await res.json();
+        const data = await apiAnalyze(inputText);
         setAnalysis(data);
       } catch (e) {
         console.error('Analysis error:', e);
@@ -125,21 +119,15 @@ export default function App() {
 
     setIsHumanizing(true);
     try {
-      const res = await fetch('/api/humanize', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          text: inputText,
-          provider: config.provider,
-          apiKey: config.apiKey,
-          model: config.model,
-          voiceSample,
-          tone: config.tone,
-          temperature: config.temperature
-        })
+      const data = await apiHumanize(inputText, {
+        provider: config.provider,
+        apiKey: config.apiKey,
+        model: config.model,
+        voiceSample,
+        tone: config.tone,
+        temperature: config.temperature
       });
 
-      const data = await res.json();
       if (data.error) {
         alert(data.error);
         return;
@@ -521,6 +509,15 @@ export default function App() {
           </div>
 
           <div className="flex items-center gap-3 sm:gap-4">
+            <a
+              href="https://kmrr-gautam.github.io/WriteByUs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-emerald-300 flex items-center gap-1 transition-colors text-emerald-400/90 font-medium"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>Live App</span>
+            </a>
             <button onClick={() => setIsRulesOpen(true)} className="hover:text-zinc-300 transition-colors">
               26 Tells
             </button>
