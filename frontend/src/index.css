@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#090a0f] text-zinc-200 font-sans;
+    overflow-x: hidden;
+  }
+}
+
+/* Minimalist sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Minimal borders */
+.border-zinc-850 {
+  border-color: #1e2029;
+}
+
+/* Diff styles */
+.diff-removed {
+  background: rgba(244, 63, 94, 0.15);
+  color: #fda4af;
+  text-decoration: line-through;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+
+.diff-added {
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  padding: 1px 3px;
+  border-radius: 3px;
+  font-weight: 500;
+}

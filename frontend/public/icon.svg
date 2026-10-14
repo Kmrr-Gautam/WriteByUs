@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121316" />
+      <stop offset="100%" stop-color="#090a0d" />
+    </linearGradient>
+    <linearGradient id="wGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4f4f5" />
+      <stop offset="100%" stop-color="#a1a1aa" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+
+  <!-- Minimal Dark Background with refined border -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <rect width="506" height="506" x="3" y="3" rx="109" fill="none" stroke="#27272a" stroke-width="4" />
+
+  <!-- Minimalist Geometric W Monogram with human writing stroke -->
+  <g transform="translate(100, 140)">
+    <!-- Main W strokes -->
+    <path d="M20 30 L85 220 L155 40 L225 220 L290 30" 
+          fill="none" 
+          stroke="url(#wGrad)" 
+          stroke-width="32" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Minimalist editorial nib dot -->
+    <circle cx="290" cy="30" r="16" fill="url(#accent)" />
+    <!-- Underline ink stroke -->
+    <path d="M40 250 L270 250" 
+          stroke="#27272a" 
+          stroke-width="12" 
+          stroke-linecap="round" />
+    <path d="M85 250 L180 250" 
+          stroke="url(#accent)" 
+          stroke-width="12" 
+          stroke-linecap="round" />
+  </g>
+</svg>

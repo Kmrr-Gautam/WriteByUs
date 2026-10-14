@@ -1,0 +1,24 @@
+{
+  "name": "writebyus-text-humanizer",
+  "version": "1.0.0",
+  "description": "WriteByUs a text humanizer — PWA removing AI tells, verifying genuine AI plagiarism, and restoring human voice",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "npx -y concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "writebyus",
+    "text-humanizer",
+    "ai-plagiarism-checker",
+    "pwa",
+    "authenticity-scanner",
+    "nodejs",
+    "tailwind",
+    "vite"
+  ],
+  "author": "WriteByUs",
+  "license": "MIT"
+}

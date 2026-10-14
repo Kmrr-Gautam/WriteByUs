@@ -1,0 +1,25 @@
+{
+  "name": "WriteByUs — a text humanizer",
+  "short_name": "WriteByUs",
+  "description": "WriteByUs humanizes AI writing, removes robotic patterns, and verifies genuine authenticity.",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "background_color": "#090a0f",
+  "theme_color": "#18181b",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["productivity", "utilities", "writing", "education"]
+}
